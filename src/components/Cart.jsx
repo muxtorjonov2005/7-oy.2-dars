@@ -11,30 +11,30 @@ function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  const handleAddItem = (item) => {
+  function handleAddItem(item) {
     dispatch(addItem(item));
   };
 
-  const handleRemoveItem = (id) => {
+  function handleRemoveItem(id) {
     dispatch(removeItem({ id }));
   };
 
-  const handleIncrementQuantity = (id) => {
+  function handleIncrementQuantity(id) {
     dispatch(incrementQuantity({ id }));
   };
 
-  const handleDecrementQuantity = (id) => {
+  function handleDecrementQuantity(id) {
     dispatch(decrementQuantity({ id }));
   };
 
   return (
     <div className="cart w-[600px] text-center mx-auto flex flex-col gap-5">
       <h1 className="text-3xl mb-3">Savatcha</h1>
-      <form class="flex gap-4 items-center justify-center">
+      <form className="flex gap-4 items-center justify-center">
         <input
           type="text"
           placeholder="Enter product name"
-          class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         <button
           type="submit"
@@ -46,7 +46,7 @@ function Cart() {
               e.target.previousElementSibling.value = "";
             }
           }}
-          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
         >
           Add
         </button>
