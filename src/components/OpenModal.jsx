@@ -16,7 +16,7 @@ function OpenModal() {
       </button>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-gray-800 opacity-75 fixed inset-0"></div>
+          <div className="bg-gray-800 opacity-80 fixed inset-0"></div>
           <div className="bg-white p-6 rounded-lg z-50 shadow-lg">
             <div className="mb-4">Modal Oyna</div>
             <button
